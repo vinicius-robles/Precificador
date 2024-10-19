@@ -1,30 +1,23 @@
-const valorLinha = 0.10;
-const valorParOlhos = 1.00;
-const valorChaveiro = 1.54;
-const valorDiariaProducao = 5.88;
+let valorLinha = 0.10;
+let valorParOlhos = 1.00;
+let valorChaveiro = 1.54;
+let valorHoraProducao = 3.50; //horas
 
-function calcularCusto (quantidadeLinha, quantidadeParOlhos, quantidadeChaveiros, diasProducao) {
-    const custoLinha = quantidadeLinha * valorLinha;
-    const custoParOlhos = quantidadeParOlhos * valorParOlhos;
-    const custoChaveiro = quantidadeChaveiros * valorChaveiro;
-    const custoProducao = diasProducao * valorDiariaProducao;
+function botaoCalcular() {
 
-    const precoCusto = custoLinha + custoParOlhos + custoChaveiro + custoProducao;
+    let quantidadeLinha = document.getElementById("quantidade__linha").value;
+    let quantidadeParOlhos = document.getElementById("quantidade__par__olhos").value;
+    let quantidadeChaveiros = document.getElementById("quantidade__chaveiros").value;
+    let horasProducao = document.getElementById("horas__procucao").value;
 
-    const lucro = precoCusto * 1.2;
+    let custoLinha = quantidadeLinha * valorLinha;
+    let custoParOlhos = quantidadeParOlhos * valorParOlhos;
+    let custoChaveiro = quantidadeChaveiros * valorChaveiro;
+    let custoProducao = horasProducao * valorHoraProducao;
 
-    return {
-        precoCusto: precoCusto.toFixed(2),
-        lucro: lucro.toFixed(2)
-    }
+    let precoCusto = (custoLinha + custoParOlhos + custoChaveiro + custoProducao);
+    let lucro = (precoCusto * 1.3);
 
+    console.log(`O custo total do serviço é: R$${precoCusto.toFixed(2)}`);
+    console.log(`Seu preço final é: R$${lucro.toFixed(2)}`); 
 }
-
-const quantidadeLinha = 12;
-const quantidadeParOlhos = 1;
-const quantidadeChaveiros = 1;
-const diasProducao = 6;
-
-const resultado = calcularCusto(quantidadeLinha, quantidadeParOlhos, quantidadeChaveiros, diasProducao);
-console.log(`O custo total do serviço é: R$${resultado.precoCusto}`);
-console.log(`Seu preço final é: R$${resultado.lucro}`)
