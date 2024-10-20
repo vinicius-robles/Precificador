@@ -5,40 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precificador Harumi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header></header>
-    <main>
-        <h1>Calcule o preço!</h1>
-        <div>
+    <main class="conteudo">
+        <img class="logo" src="assets/logo.svg">
+        <h1 class="conteudo__titulo">calcule o preço</h1>
+        <div class="conteudo__informacoes">
             <div>
-                <p>Peso</p>
-                <input type="number" class="" id="quantidade__linha">
+                <!-- <p class="conteudo__informacoes__texto">Peso</p> -->
+                <input type="number" placeholder="Peso" class="conteudo__informacoes__campo" id="quantidade__linha">
             </div>
             <div>
-                <p>Par de olhos</p>
-                <input type="number" class="" id="quantidade__par__olhos">
+                <!-- <p class="conteudo__informacoes__texto">Quantidade de olhos</p> -->
+                <input type="number" placeholder="Quantidade de olhos" class="conteudo__informacoes__campo" id="quantidade__par__olhos">
             </div>
             <div>
-                <p>Chaveiro</p>
-                <input type="number" class="" id="quantidade__chaveiros">
+                <!-- <p class="conteudo__informacoes__texto">Chaveiro</p> -->
+                <input type="number" placeholder="Chaveiro" class="conteudo__informacoes__campo" id="quantidade__chaveiros">
             </div>
             <div>
-                <p>Horas trabalhadas</p>
-                <input type="number" class="" id="horas__procucao">
+                <!-- <p class="conteudo__informacoes__texto">Horas trabalhadas</p> -->
+                <input type="number" placeholder="Horas trabalhadas" class="conteudo__informacoes__campo" id="horas__procucao">
             </div>
         </div>
-        <div>
-            <button onclick="botaoCalcular()" id="btn__calcular" class="">Calcular</button>
-            <button onclick="botaoNovoPreco()" id="btn__novo__preco" class="" disabled>Novo Preço</button>
+        <div class="conteudo__botoes">
+            <button onclick="botaoCalcular()" id="btn__calcular" class="conteudo__botoes__item">calcular</button>
+            <button onclick="botaoNovoPreco()" id="btn__novo__preco" class="conteudo__botoes__item" disabled>novo preço</button>
         </div>
-        <div>
-            <p class="" id="resultado__custo"></p>
-            <p class="" id="resultado__preco"></p>
+        <div class="conteudo__resultado">
+            <p class="conteudo__resultado__texto" id="resultado__custo"></p>
+            <p class="conteudo__resultado__texto" id="resultado__preco"></p>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <p>Desenvolvido por Vinicius Robles</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 

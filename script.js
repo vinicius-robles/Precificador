@@ -19,9 +19,9 @@ function botaoCalcular() {
     let lucro = (precoCusto * 1.3);
 
     let resultadoCusto = document.getElementById("resultado__custo");
-    resultadoCusto.innerHTML = `O custo total do serviço é: R$${precoCusto.toFixed(2)}`;
+    resultadoCusto.innerHTML = `O custo total do serviço é: <span style="font-weight: 700;">R$${precoCusto.toFixed(2)}</span>`;
     let resultadoLucro = document.getElementById("resultado__preco");
-    resultadoLucro.innerHTML = `O preço final deste produto é: R$${lucro.toFixed(2)}`;
+    resultadoLucro.innerHTML = `O preço final deste produto é: <span style="font-weight: 700;">R$${lucro.toFixed(2)}</span>`;
 
     // console.log(`O custo total do serviço é: R$${precoCusto.toFixed(2)}`);
     // console.log(`O preço final deste produto é: R$${lucro.toFixed(2)}`); 

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #FEF3EF;
+    --cor-secundaria: #8c9597;
+    --cor-terciaria: #fde3dc;
+    --cor-neutra: #F6F6F6;
+    --cor-texto-contraste: #939ea0;
+    --cor-botao-ativado: #a5babe;
+
+    --fonte-titulo: "Asap", sans-serif;
+    --fonte-texto: "Montserrat", sans-serif;
+
+    /* --cor-primaria: #E4BAAE;
+    --cor-secundaria: #687B7F;
+    --cor-terciaria: #FEF3EF; */
+}
+
+body {
+    height: 100vh;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+main {
+    display: flex;
+    height: 89%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+    gap: 20px;
+}
+
+.logo {
+    width: 30%;
+}
+
+.conteudo__titulo {
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    border-bottom: 3px solid var(--cor-texto-contraste);
+    padding: 12px;
+    width: 70%;
+}
+
+.conteudo__informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0, ;
+    border: 3px solid var(--cor-terciaria);
+    border-radius: 16px;
+    width: 212px;
+    height: 188px;
+    gap: 10px;
+}
+
+.conteudo__informacoes__campo {
+    width: 175px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    padding: 6px;
+    gap: 8px;
+    color: var(--cor-secundaria);
+
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+}
+
+.conteudo__informacoes__campo::placeholder {
+    font-family: var(--fonte-texto);
+}
+
+.conteudo__botoes {
+    display: flex;
+    gap: 8px;
+}
+
+.conteudo__botoes__item {
+    background-color: transparent;
+    width: 139px;
+    height: 52px;
+    border: 3px solid var(--cor-terciaria);
+    border-radius: 12px;
+    color: var(--cor-secundaria);
+    box-shadow: 0px 1px 2px #aaa8a8;
+
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.conteudo__botoes__item:active {
+    background-color: var(--cor-terciaria);
+    border: none;
+    color: var(--cor-texto-contraste);
+    position: relative;
+    bottom: -1px;
+    box-shadow: none;
+}
+
+.conteudo__resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border: 3px solid var(--cor-terciaria);
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.conteudo__resultado__texto {
+    font-family: var(--fonte-texto);
+}
+
+footer {
+    text-align: center;
+    padding: 4px;
+}
