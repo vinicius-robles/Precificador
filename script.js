@@ -19,7 +19,7 @@ function botaoCalcular() {
     let custoProducao = horasProducao * valorHoraProducao;
 
     let precoCusto = (custoLinha + custoParOlhos + custoChaveiro + custoProducao);
-    let lucro = (precoCusto * 1.3);
+    let lucro = (precoCusto * 1.4);
 
     resultadoCusto.innerHTML = `<p class="conteudo__resultado__texto" id="resultado__custo">O custo total deste produto é: 
 <span style="font-weight: 700;">R$${precoCusto.toFixed(2)}</span></p>`;
